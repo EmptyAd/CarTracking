@@ -106,7 +106,7 @@ while True:
         cv.rectangle(frame1, (x+600, y), (x + w+600, y + h), (0, 255, 0), 2)
 
         # Get the center of the rectangle
-        center = get_center(x, y, w, h)
+        center = get_center(x+600, y, w, h)
 
         # Add the object into list
         detections.append(center)
