@@ -62,7 +62,7 @@ while True:
     contours2, hierarchy2 = cv.findContours(right, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
 
     # Draw the counting line
-    cv.line(frame1, (25, line_position), (1200, line_position), (255, 255, 0), 2)
+    #cv.line(frame1, (25, line_position), (1200, line_position), (255, 255, 0), 2)
 
     # Iterate through each contour for left side
     for (i, contour1) in enumerate(contours1):
@@ -89,7 +89,7 @@ while True:
         for (cx, cy) in detections:
             if line_position - offset < cy < line_position + offset:
                 cars_left += 1
-                cv.line(frame1, (25, line_position), (1200, line_position), (0, 255, 255), 3)
+                #cv.line(frame1, (25, line_position), (1200, line_position), (0, 255, 255), 3)
                 detections.remove((cx, cy))
                 print("Incoming:  " + str(cars_left))
     
@@ -118,9 +118,9 @@ while True:
         for (cx, cy) in detections:
             if line_position - offset < cy < line_position + offset:
                 cars_right += 1
-                cv.line(frame1, (25, line_position), (1200, line_position), (0, 255, 255), 3)
+                #cv.line(frame1, (25, line_position), (1200, line_position), (0, 255, 255), 3)
                 detections.remove((cx, cy))
-                print("Outgoing: " + str(cars_right))
+                print("Outgoing:  " + str(cars_right))
 
     # Display the vehicle count on the frame
     cv.putText(frame1, "Entering: " + str(cars_right), (700, 70), cv.FONT_HERSHEY_SIMPLEX, 2, (0, 0, 255), 3)
