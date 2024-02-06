@@ -126,7 +126,7 @@ while True:
     cv.putText(frame1, "Entering: " + str(cars_right), (700, 70), cv.FONT_HERSHEY_SIMPLEX, 2, (0, 0, 255), 3)
 
     # Display the vehicle count on the frame
-    cv.putText(frame1, "Exit: " + str(cars_left), (25, 70), cv.FONT_HERSHEY_SIMPLEX, 2, (0, 0, 255), 3)
+    cv.putText(frame1, "Exiting: " + str(cars_left), (25, 70), cv.FONT_HERSHEY_SIMPLEX, 2, (0, 0, 255), 3)
 
     # Show the original and processed frames
     cv.imshow("Original Video", frame1)
